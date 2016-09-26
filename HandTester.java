@@ -1,6 +1,11 @@
 
 public class HandTester {
 	public static void main(String[] args) {
+		
+		//this creates 2 hands and then scores them
+			//Feel free to test the inputs
+			//It is assumed the input is valid (1,2,3,4) for suit or (2-14) for value
+			//The hand does not check for duplicates, user is expected to provide valid input
 		Card card1 = new Card(1, 2);
 		Card card2 = new Card(2, 10);
 		Card card3 = new Card(3, 11);
@@ -37,6 +42,9 @@ public class HandTester {
 		checkFor4(hand2);
 		checkForStraightFlush(hand2);
 		
+		System.out.println("Hand1: " + hand.toString() + "\nHand2: " + hand2.toString());
+		
+		//This compares the scores and tells you which hand won
 		if(hand.getScore() > hand2.getScore())
 			System.out.println("Hand 1 wins!");
 		else if(hand2.getScore() > hand.getScore())
